@@ -12,8 +12,19 @@
 
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 
-  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
-
+  <script>
+    var color_scheme = "default"
+    if(!!localStorage.dark){
+      color_scheme = "dark"
+    }
+    var head  = document.getElementsByTagName('head')[0];
+    var link  = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = '/assets/css/just-the-docs-'+color_scheme+'.css';
+    head.appendChild(link);
+  </script>
+  
   {% if site.ga_tracking != nil %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
     <script>
