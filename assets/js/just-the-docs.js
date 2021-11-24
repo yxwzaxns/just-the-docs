@@ -68,17 +68,21 @@ function initNav() {
 // Site search
 
 function initSearch() {
-  vat lang = location.href.match(/\/(zh|en)\/?/) && location.href.match(/\/(zh|en)\/?/)[1] || 'en'
-  console.log(lang)
+  var lang = location.href.match(/\/(zh|en)\/?/) && location.href.match(/\/(zh|en)\/?/)[1] || 'en'
   var request = new XMLHttpRequest();
   request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
   
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
       var docs = JSON.parse(request.responseText);
+      docs = Object.keys(docs)
+        .map(function(e){return docs[e]})
+        .filter(function(e){
+          return lang === 'en' ? !e.relUrl.match(/^\/.{2}\//) : e.relUrl.startsWith('/'+lang+'/')
+        })
       
       lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
-
+      
       var index = lunr(function(){
         this.ref('id');
         this.field('title', { boost: 200 });
