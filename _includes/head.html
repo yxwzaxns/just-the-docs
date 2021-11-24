@@ -13,10 +13,7 @@
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 
   <script>
-    var color_scheme = "default";
-    if(!!localStorage.dark){
-      color_scheme = "dark"
-    }
+    var color_scheme = window.localStorage.color_scheme || "default";
     var head  = document.getElementsByTagName('head')[0];
     var link  = document.createElement('link');
     link.rel  = 'stylesheet';
