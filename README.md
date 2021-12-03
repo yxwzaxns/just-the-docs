@@ -1,3 +1,12 @@
+<p align="center">
+    <h1 align="center">Just the Docs Plus</h1>
+    <p align="center"><strong><a href="https://jtdp.copha.net/">See it in action!</a></strong></p>
+    <br><br><br>
+</p>
+
+- [x] 可配置中英文切换，支持用户端切换/保存
+- [x] 支持用户端切换/保存色彩模式
+
 <p align="right">
     <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/pmarsceill/just-the-docs/actions?query=workflow%3A%22Master+branch+CI%22"><img src="https://github.com/pmarsceill/just-the-docs/workflows/Master%20branch%20CI/badge.svg" alt="Build status"></a>
 </p>
