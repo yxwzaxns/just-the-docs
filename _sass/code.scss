@@ -109,9 +109,14 @@ figure.highlight {
   }
 }
 
-.highlight .c {
+.light .highlight .c {
   color: #586e75;
 } // comment //
+
+.dark .highlight .c {
+  color: #bdd8e1;
+} // comment //
+
 .highlight .err {
   color: #93a1a1;
 } // error //
@@ -210,9 +215,11 @@ figure.highlight {
 .highlight .na {
   color: #555;
 } // name.attribute //
+
 .highlight .nb {
   color: #b58900;
 } // name.builtin //
+
 .highlight .nc {
   color: #268bd2;
 } // name.class //
