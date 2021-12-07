@@ -1,3 +1,11 @@
 {%- if site.footer_content -%}
   <p class="text-small text-grey-dk-100 mb-0">{{ site.footer_content }}</p>
 {%- endif -%}
+<script>
+  if (navigator.serviceWorker != null) {
+    navigator.serviceWorker.register('sw.js')
+    .then(function(registration) {
+      console.log('Registered events at scope: ', registration.scope);
+    });
+  }
+</script>
