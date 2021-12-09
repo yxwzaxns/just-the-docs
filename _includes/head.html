@@ -11,7 +11,7 @@
   {% endunless %}
   <link rel="manifest" href="/manifest.json" />
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
-
+  <link rel="apple-touch-icon" sizes="192x192" href="{{ '/assets/images/pwa/icon_x192.png' | relative_url }}">
   <script>
     var color_scheme = window.localStorage.color_scheme || "default";
     var head  = document.getElementsByTagName('head')[0];
