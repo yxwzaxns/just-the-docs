@@ -81,7 +81,14 @@
       }
     }
   }
-
+  
+  blockquote::before {
+    position: absolute;
+    margin-left: -1.4em;
+    color: #959396;
+    content: "|"
+  }
+  
   .task-list {
     padding-left: 0;
   }
