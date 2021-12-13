@@ -1,11 +1,13 @@
-@import "compass/css3";
-
 $fg: #536574;
 $pi: 3.14;
 
 $menu-items: 3;
 $open-distance: 75px;
 $opening-angle: $pi * 2;
+
+%goo{
+  filter:url('#shadowed-goo');
+}
 
 %ball {
   background: $fg;
@@ -63,6 +65,7 @@ $hamburger-spacing: 8px;
   }
 }
 .menu {
+  @extend %goo;
   $width: 50px;
   $height: 150px;
   position: fixed;
