@@ -19,7 +19,7 @@ $opening-angle: $pi * 2;
   top: 20px;
   color: white;
   text-align: center;
-  line-height: 80px;
+  // line-height: 80px;
   transform: translate3d(0, 0, 0);
   transition: transform ease-out 200ms;
 }
@@ -28,6 +28,10 @@ $opening-angle: $pi * 2;
 }
 .menu-item {
   @extend %ball;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .hamburger {
   $width: 25px;
@@ -80,7 +84,8 @@ $hamburger-spacing: 8px;
 
 .menu-item {
   &:hover {
-    background: white;
+    background: unset;
+    border: 1px solid $fg;
     color: $fg;
   }
   @for $i from 1 through $menu-items {
